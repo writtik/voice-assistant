@@ -21,11 +21,13 @@ client = wolframalpha.Client(put wolframpalpha api key)
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[len(voices)-1].id)
 
+
 def speak(audio):
     print('Computer: ' + audio)
     engine.say(audio)
     engine.runAndWait()
 
+    
 def greetMe():
     currentH = int(datetime.datetime.now().hour)
     if currentH >= 0 and currentH < 12:
@@ -59,6 +61,7 @@ def mc():
         query = str(input('Command: '))
 
     return query
+
 
 def mc1():
    
@@ -113,10 +116,10 @@ if __name__ == '__main__':
                     email = '#' #mom's email address
 
                 elif 'dad' in recpt :
-                    email = '' #daad email address
+                    email = '' #dad's email address
 
                 elif 'moin' in recpt :
-                    email = '#' #friens'd email address
+                    email = '#' #friend's email address
 
                 else:
                     email = 'ninjahydra357@gmail.com'
